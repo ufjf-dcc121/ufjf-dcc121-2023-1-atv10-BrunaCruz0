@@ -1,12 +1,11 @@
-function setup(){
-window,addEventListener('load', setup);
+window.addEventListener('load', setup);
 
+function setup() {
+    const form = document.forms.entrada;
+    form.addEventListener('submit', envia);
+}
 
-const form= document.forms.entrada;
-        form.addEventListener('submit', envia);
- }
-    
-        function envia(evento){
-            evento.preventDefalt();
-            console.log('Formulario enviado!');
-        }
+function envia(evento) {
+    evento.preventDefault();
+    console.log('Formulario enviado!');
+}
