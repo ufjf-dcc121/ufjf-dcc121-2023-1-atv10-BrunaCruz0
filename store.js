@@ -4,6 +4,10 @@ export function adicionar(valor) {
     store.estado.push(valor);
 
 }
+export function remove() {
+    store.estado.pop();
+}
+
 
 export function ler() {
     return [...store.estado];
