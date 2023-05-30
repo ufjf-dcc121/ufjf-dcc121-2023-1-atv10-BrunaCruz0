@@ -1,11 +1,17 @@
-window.addEventListener('load', setup);
+const form = document.forms.entrada;
+form.addEventListener('submit', envia);
 
-function setup() {
-    const form = document.forms.entrada;
-    form.addEventListener('submit', envia);
-}
+
+let estado = 0;
+atualiza();
 
 function envia(evento) {
     evento.preventDefault();
     console.log('Formulario enviado!');
+    estado++;
+    atualiza();
+}
+function atualiza() {
+    const ol = document.querySelector('ol');
+    ol.innerHTML = `<li>${estado}</li>`;
 }
