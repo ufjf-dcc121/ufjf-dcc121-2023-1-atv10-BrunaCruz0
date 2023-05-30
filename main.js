@@ -1,12 +1,18 @@
-import {adicionar, itens} from "./store.js";
+import { adicionar, getItens, getRemove } from "./store.js";
 
 const form = document.forms.entrada;
 form.addEventListener('submit', envia);
+form.remover.addEventListener('click',remove);
 
 
 
 atualiza();
+function remove(){
+    console.log('Remove clickado!');
+    remover();
+    atualizar();
 
+}
 function envia(evento) {
     evento.preventDefault();
     console.log('Formulario enviado!');
