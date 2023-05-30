@@ -1,4 +1,4 @@
-import {adicionar, items} from "./store.js";
+import {adicionar, itens} from "./store.js";
 
 const form = document.forms.entrada;
 form.addEventListener('submit', envia);
